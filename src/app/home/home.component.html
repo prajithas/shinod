@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-6 mb-3" *ngFor="let blog of posts" id="showFristBlog">
+           <span class="position-absolute catname px-3 py-2 text-dark">{{blog.categoryName}}</span>
+           <a class="text-decoration-none text-dark" routerLink="{{blog.categoryName}}/{{ blog.slug }}_{{ blog.id }}">
+              <img
+                class="img-fluid rounded card-img-top position-relative"
+                width="400"
+                src="{{ blog.featured_media_src_url }}"
+                alt=""
+              /></a>
+              <div class="card-body">
+             
+              <h3 class="card-title mb-1">
+                 <a class="text-decoration-none text-dark" routerLink="{{blog.categoryName}}/{{ blog.slug }}_{{ blog.id }}"> 
+                   {{ blog.title.rendered }}
+                  </a>
+              </h3>
+              <fa-icon [icon]="faCalendar"></fa-icon> {{ blog.date | date:'longDate'}}
+              <p class="card-text pt-3" [innerHTML]="blog.excerpt.rendered"></p>
+           
+         
+        </div>
+        </div>
+      </div>
+      <div class="row mb-3 mt-3">
+        <div class="col-6">
+          <button (click)="previous()">Previous</button>
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+          <button (click)="next()">Next</button>
+        </div>
+      </div>

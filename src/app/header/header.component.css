@@ -1,0 +1,15 @@
+.titledesc h1{
+    font-size: 50px;
+    line-height: 55px;
+    color:#48484D;
+    margin-bottom:0px;
+    
+}
+.titledesc p{
+    font-size: 17px;
+    color:#C09E77;
+}
+.titledesc{
+    padding-top:20px;
+    padding-bottom:20px;
+}

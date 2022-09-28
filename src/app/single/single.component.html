@@ -1,0 +1,27 @@
+<article>
+    <span class="category bg-dark p-2 rounded">
+      <a routerLink="/category/{{this.categoryName.slug}}" [state]="{categoryId:this.categoryName.id}" class="text-warning text-decoration-none">
+        {{categoryName.name}}</a>
+    </span>
+    <h1 class="mt-2">{{posts.title.rendered}}</h1>
+    <div class="meta pb-2"><fa-icon [icon]="faCalendar"></fa-icon> {{ posts.date | date:'longDate'}}</div>
+    <img
+    class="img-fluid rounded card-img-top mb-3"
+    width="400"
+    src="{{ posts.featured_media_src_url }}"
+    alt=""
+  />
+  <p class="card-text" [innerHTML]="posts.content.rendered"></p>
+  <div class="my-2"> 
+    <div class="fb-comments" data-href="https://www.facebook.com/edakkadshinod" data-width="" data-numposts="5"></div>
+  </div>
+ 
+  <span><fa-icon [icon]="faTags"></fa-icon><span *ngFor="let tag_name of tag">
+    <a routerLink="/tag/{{ tag_name.id}}" class="text-dark text-decoration-none border p-1 mx-1">
+        {{tag_name.name}}</a> 
+  </span>
+   
+</span> 
+
+   
+</article>

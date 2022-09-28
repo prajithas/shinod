@@ -1,0 +1,35 @@
+<div class="row border-bottom border-top py-2">
+    <h3 class="text-capitalize fs-3 text-secondary">{{tagname}}</h3> 
+ </div>
+ <div class="row mt-3 border-bottom" *ngFor="let blog of posts" id="showFristBlog">
+     <div class="col-md-3 mb-3" >
+            
+               <img
+                 class="img-fluid rounded card-img-left"
+                 width="400"
+                 src="{{ blog.featured_media_src_url }}"
+                 alt=""
+               />
+     </div>
+     <div class="col-md-9 mb-3" >
+               <div class="card-body">
+              
+               <h3 class="card-title"> 
+                 <a class="text-decoration-none text-dark" routerLink="/{{blog.categoryName}}/{{ blog.slug }}_{{ blog.id }}">  {{ blog.title.rendered }}</a>
+               </h3>
+               <fa-icon [icon]="faCalendar"></fa-icon> {{ blog.date | date:'longDate'}}
+               <share-buttons theme="modern-light" [include]="['facebook','twitter','whatsapp','linkedin','telegram','email']" [show]="4"></share-buttons>
+         </div>
+         </div>
+         <div class="card-text mt-1 pb-3" [innerHTML]="blog.excerpt.rendered"></div>
+     </div>
+    
+       <div class="row mb-3 mt-3">
+         <div class="col-6">
+           <button (click)="previous()">Previous</button>
+         </div>
+         <div class="col-6 d-flex justify-content-end">
+           <button (click)="next()">Next</button>
+         </div>
+       </div>
+ 

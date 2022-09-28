@@ -1,0 +1,11 @@
+.card-body h3.card-title{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:18px;
+    font-weight:600;
+}
+.card-text{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:16px;
+    font-weight:400;
+   
+}

@@ -1,0 +1,19 @@
+article h1{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:24px;
+    font-weight:600;
+    padding-top:10px;
+    line-height:32px;
+}
+.card-text{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    line-height:22px;
+}
+span{ font-family: 'Noto Sans Malayalam', sans-serif;}
+.card-text img{
+    max-width:fit-content;
+    width:10%;
+    overflow: hidden;
+}

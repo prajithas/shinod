@@ -1,0 +1,4 @@
+<article *ngFor="let posts of posts">
+    <h1 class="mt-2 border-top border-bottom py-2 mb-3">{{posts.title.rendered}}</h1>
+    <p class="card-text" [innerHTML]="posts.content.rendered"></p> 
+</article>

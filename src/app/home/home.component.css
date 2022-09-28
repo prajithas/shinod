@@ -1,0 +1,20 @@
+.card-body h3.card-title{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:18px;
+    font-weight:600;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.card-text{
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size:16px;
+    font-weight:400;
+    height:140px;
+    overflow: hidden;
+    transition:1s ease-in;
+   
+}
+#showFristBlog span.catname{
+    z-index: 9999;
+    background-color:rgba(192,158,119, 0.8)
+}
